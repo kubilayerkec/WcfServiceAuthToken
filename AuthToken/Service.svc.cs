@@ -16,6 +16,7 @@ namespace AuthToken
     public class Service : IService
     {
         private string secureToken;
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
         public ResponseUserData Login(UserLoginData data) //Response class for retriving data  
         {
             try
